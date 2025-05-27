@@ -22,3 +22,8 @@
 (setq private/system-is-linux (eq system-type 'windows-nt))
 
 (require 'init-package)
+
+;; Load the custom file if it exists, also write to it
+(setq custom-file (expand-file-name "custom.el" (private/emacs-config-dir)))
+(when (file-exists-p custom-file)
+  (load custom-file))
