@@ -22,6 +22,7 @@
 (setq private/system-is-linux (eq system-type 'windows-nt))
 
 (require 'init-package)
+(require 'init-ui)
 
 ;; Load the custom file if it exists, also write to it
 (setq custom-file (expand-file-name "custom.el" (private/emacs-config-dir)))
