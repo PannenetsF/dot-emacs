@@ -23,6 +23,7 @@
 
 (require 'init-package)
 (require 'init-ui)
+(require 'init-evil)
 
 ;; Load the custom file if it exists, also write to it
 (setq custom-file (expand-file-name "custom.el" (private/emacs-config-dir)))
