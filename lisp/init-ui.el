@@ -1,7 +1,10 @@
-(blink-cursor-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(tooltip-mode -1)
+;; UI configuration for Emacs
+
+(blink-cursor-mode -1) ;; Disable blinking cursor
+(scroll-bar-mode -1) ;; Disable scroll bar
+(tool-bar-mode -1) ;; Disable tool bar
+(tooltip-mode -1) ;; Disable tooltips
+
 (setq mouse-highlight nil)
 (setq scroll-conservatively 0)
 (setq column-number-mode t)

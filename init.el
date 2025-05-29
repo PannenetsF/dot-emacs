@@ -8,24 +8,25 @@
 
 
 ;; Set the config directory
-(defun private/emacs-config-dir ()
+(defun system/emacs-config-dir ()
   (concat (file-name-directory load-file-name)))
-(add-to-list 'load-path (concat (private/emacs-config-dir) "lisp/"))
+(add-to-list 'load-path (concat (system/emacs-config-dir) "lisp/"))
 
 ;; Set the cache directory
-(setq private/cache-directory
-      (expand-file-name ".cache/" (private/emacs-config-dir)))
+(setq system/cache-directory
+      (expand-file-name ".cache/" (system/emacs-config-dir)))
 
 ;; Check the system type
-(setq private/system-is-mac (eq system-type 'darwin))
-(setq private/system-is-linux (eq system-type 'gnu/linux))
-(setq private/system-is-linux (eq system-type 'windows-nt))
+(setq system/is-mac (eq system-type 'darwin))
+(setq system/is-linux (eq system-type 'gnu/linux))
+(setq system/is-win (eq system-type 'windows-nt))
 
 (require 'init-package)
 (require 'init-ui)
 (require 'init-evil)
+(require 'post-config)
 
 ;; Load the custom file if it exists, also write to it
-(setq custom-file (expand-file-name "custom.el" (private/emacs-config-dir)))
+(setq custom-file (expand-file-name "custom.el" (system/emacs-config-dir)))
 (when (file-exists-p custom-file)
   (load custom-file))
