@@ -10,11 +10,11 @@
 ;; Set the config directory
 (defun system/emacs-config-dir ()
   (concat (file-name-directory load-file-name)))
-(add-to-list 'load-path (concat (system/emacs-config-dir) "lisp/"))
+(add-to-list 'load-path (expand-file-name "lisp/"))
 
 ;; Set the cache directory
 (setq system/cache-directory
-      (expand-file-name ".cache/" (system/emacs-config-dir)))
+      (expand-file-name ".cache/"))
 
 ;; Check the system type
 (setq system/is-mac (eq system-type 'darwin))
@@ -24,6 +24,7 @@
 (require 'init-package)
 (require 'init-ui)
 (require 'init-evil)
+(require 'init-edition)
 (require 'post-config)
 
 ;; Load the custom file if it exists, also write to it
