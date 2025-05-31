@@ -1,4 +1,4 @@
-(add-to-list 'load-path (expand-file-name "lsp-bridge/"))
+(add-to-list 'load-path (system/get-path-under-emacs-config "lsp-bridge/"))
 
 (use-package yasnippet
   :diminish yas-minor-mode
