@@ -24,6 +24,7 @@
 (require 'init-package)
 (require 'init-ui)
 (require 'init-evil)
+(require 'init-navigation)
 (require 'init-lsp)
 (require 'post-config)
 
