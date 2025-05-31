@@ -12,5 +12,6 @@
 (setq x-underline-at-descent-line t)
 (setq x-stretch-cursor t)
 
+(add-to-list 'default-frame-alist '(undecorated-round . t))
 
 (provide 'init-ui)
