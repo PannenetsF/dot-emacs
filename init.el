@@ -24,7 +24,7 @@
 (require 'init-package)
 (require 'init-ui)
 (require 'init-evil)
-(require 'init-edition)
+(require 'init-lsp)
 (require 'post-config)
 
 ;; Load the custom file if it exists, also write to it
