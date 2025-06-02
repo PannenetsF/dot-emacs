@@ -14,4 +14,9 @@
 
 (add-to-list 'default-frame-alist '(undecorated-round . t))
 
+(use-package catppuccin-theme
+  :ensure t)
+(setq catppuccin-flavor 'mocha)
+(load-theme 'catppuccin :no-confirm)
+
 (provide 'init-ui)
