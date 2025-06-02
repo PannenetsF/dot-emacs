@@ -26,6 +26,11 @@
   (general-create-definer system/local-leader-define
 			  :states '(normal visual motion evilified)
 			  :keymaps 'override
-			  :prefix system/local-leader-prefix))
+			  :prefix system/local-leader-prefix)
+
+  (general-create-definer system/set-leader-keys-for-mode
+			  :prefix "'"
+			  :non-normal-prefix "M-m m"
+			  :states '(motion insert emacs)))
 
 (provide 'init-package)
