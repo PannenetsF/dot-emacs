@@ -17,4 +17,15 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+(use-package general
+  :config
+  (general-create-definer system/global-leader-define
+			  :states '(normal visual motion evilified)
+			  :keymaps 'override
+			  :prefix system/global-leader-prefix)
+  (general-create-definer system/local-leader-define
+			  :states '(normal visual motion evilified)
+			  :keymaps 'override
+			  :prefix system/local-leader-prefix))
+
 (provide 'init-package)

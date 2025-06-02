@@ -15,14 +15,22 @@
   "Get the absolute path under the Emacs configuration directory."
   (expand-file-name (concat system/emacs-config-dir path)))
 
+(defun system/get-package-under-emacs-config (path)
+  "Get the absolute path under the Emacs configuration directory."
+  (expand-file-name (concat system/emacs-config-dir (concat "packages/" path))))
+
 ;; Set the cache directory
-(setq system/cache-directory
-      (system/get-path-under-emacs-config ".cache/"))
+(defconst system/cache-directory
+  (system/get-path-under-emacs-config ".cache/")
+  "The directory where Emacs cache files are stored.")
 
 ;; Check the system type
-(setq system/is-mac (eq system-type 'darwin))
-(setq system/is-linux (eq system-type 'gnu/linux))
-(setq system/is-win (eq system-type 'windows-nt))
+(defconst system/is-mac (eq system-type 'darwin)
+  "Check if the system is macOS.")
+(defconst system/is-linux (eq system-type 'gnu/linux)
+  "Check if the system is Linux.")
+(defconst system/is-win (eq system-type 'windows-nt)
+  "Check if the system is Windows.")
 
 ;; exit if windows is detected
 (when system/is-win
@@ -30,10 +38,17 @@
   (kill-emacs))
 
 ;; Set the user const
-(setq user/const-org-location
-      (cond (system/is-mac "~/Documents/org")
-	    (system/is-linux "~/org")
-	    (t "~/org")))
+(defconst system/const-org-location
+  (cond (system/is-mac "~/Documents/org")
+	(system/is-linux "~/org")
+	(t "~/org"))
+  "The location of the org files.")
+
+(defconst system/global-leader-prefix "SPC"
+  "Global leader key prefix.")
+
+(defconst system/local-leader-prefix ","
+  "Local leader key prefix.")
 
 (require 'init-package)
 (require 'init-ui)

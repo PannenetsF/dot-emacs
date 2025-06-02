@@ -1,3 +1,22 @@
+;; used as tmux prefix key
+(global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "M-y") 'yank-pop)
+(global-set-key [mouse-4] (lambda () (interactive) (scroll-down 1)))
+(global-set-key [mouse-5] (lambda () (interactive) (scroll-up   1)))
+
+;; Use ESC as universal get me out of here command
+(define-key key-translation-map (kbd "ESC") (kbd "C-g"))
+
+(when system/is-mac
+  (setq ns-command-modifier       'super
+        ns-option-modifier        'meta)
+  (global-set-key [(super a)] 'mark-whole-buffer)
+  (global-set-key [(super v)] 'yank)
+  (global-set-key [(super c)] 'kill-ring-save)
+  (global-set-key [(super s)] 'save-buffer)
+  (global-set-key [(super z)] 'undo))
 
 ;; Fonts
 (defun font-installed-p (font-name)
