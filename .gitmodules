@@ -1,3 +1,3 @@
-[submodule "lsp-bridge"]
-	path = lsp-bridge
+[submodule "packages/lsp-bridge"]
+	path = packages/lsp-bridge
 	url = https://github.com/manateelazycat/lsp-bridge.git
