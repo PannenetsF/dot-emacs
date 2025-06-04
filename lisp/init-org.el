@@ -1,5 +1,4 @@
 (use-package org
-  :ensure org-plus-contrib
   :defer t
   :config
   (general-mmap
@@ -107,6 +106,9 @@
 
 (use-package zotxt
   :ensure t
+  :init (progn
+	  (add-hook 'org-mode-hook 'org-zotxt-mode)
+	  )
   )
 
 (require 'org-zotxt-noter)
