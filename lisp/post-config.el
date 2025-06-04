@@ -70,4 +70,6 @@
 (add-hook 'window-setup-hook #'centaur-setup-fonts)
 (add-hook 'server-after-make-frame-hook #'centaur-setup-fonts)
 
+(require 'init-org-noter)
+
 (provide 'post-config)

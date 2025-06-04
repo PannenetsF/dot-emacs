@@ -10,6 +10,7 @@
 ;; Set the config directory
 (setq system/emacs-config-dir user-emacs-directory)
 (add-to-list 'load-path (expand-file-name (concat system/emacs-config-dir "lisp/")))
+(add-to-list 'load-path (expand-file-name (concat system/emacs-config-dir "lisp/user")))
 
 (defun system/get-path-under-emacs-config (path)
   "Get the absolute path under the Emacs configuration directory."
