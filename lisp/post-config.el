@@ -72,4 +72,69 @@
 
 (require 'init-org-noter)
 
+
+(
+ system/global-leader-define
+ "" nil
+
+ "SPC" 'execute-extended-command
+
+ "u" 'universal-argument
+
+ ;; File
+ "ff" 'find-file
+ "fr" (lambda () (interactive) (recentf-open-files))
+ "fel" 'find-library
+ "fS" 'evil-write-all
+ "fs" 'save-buffer
+ "fvd" 'add-dir-local-variable
+ "fvf" 'add-file-local-variable
+ "fvp" 'add-file-local-variable-prop-line
+
+ ;; Buffer
+ "bb" 'switch-to-buffer
+ "bn" 'next-buffer
+ "bp" 'previous-buffer
+ "bd" 'kill-this-buffer
+ "bw" 'read-only-mode
+ ;; split
+ "bs" 'split-window-below
+ "bv" 'split-window-right
+ ;; close to left
+ ;; close to write
+
+ "TAB" (lambda () (interactive) (switch-to-buffer (other-buffer (current-buffer) t)))
+
+ ;; Jumping
+ "sj" 'imenu
+
+ ;; Help
+ "h" (general-simulate-keys "<f1>")
+
+ ;; Themes
+ "Ts"  'load-theme
+
+ ;; Window Management
+ "wd" 'delete-window
+ "wm" 'delete-other-windows
+ "wf" 'make-frame
+ "wH" 'evil-window-move-far-left
+ "wh" 'evil-window-left
+ "wJ" 'evil-window-move-very-bottom
+ "wj" 'evil-window-down
+ "wK" 'evil-window-move-very-top
+ "wk" 'evil-window-up
+ "wL" 'evil-window-move-far-right
+ "wl" 'evil-window-right
+ "wo" 'other-frame
+ "ws" 'split-window-below
+ "wS" 'split-window-below-and-focus
+ "wv" 'split-window-right
+ "wV" 'split-window-right-and-focus
+ "ww" 'other-window
+ "w=" 'balance-windows
+
+ "qf" 'delete-frame
+ "qq" 'kill-emacs)
+
 (provide 'post-config)
