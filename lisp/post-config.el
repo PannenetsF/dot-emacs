@@ -218,4 +218,7 @@
  "is" 'org-insert-subheading
  "it" 'org-set-tags)
 
+(general-mmap
+ :keymaps 'org-mode-map
+ "RET" 'org-open-at-point)
 (provide 'post-config)
