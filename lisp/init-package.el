@@ -28,7 +28,7 @@
 			  :prefix system/local-leader-prefix)
 
   (general-create-definer system/set-leader-keys-for-mode
-			  :prefix "'"
+			  :prefix system/local-leader-prefix
 			  :non-normal-prefix "M-m m"
 			  :states '(motion insert emacs)))
 
