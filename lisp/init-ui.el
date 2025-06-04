@@ -18,6 +18,10 @@
 
 (add-to-list 'default-frame-alist '(undecorated-round . t))
 
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
 (use-package catppuccin-theme
   :ensure t)
 (setq catppuccin-flavor 'mocha)
