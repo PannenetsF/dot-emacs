@@ -13,6 +13,8 @@
 (setq x-stretch-cursor t)
 (setq inhibit-startup-screen t)
 
+;; disable beep
+(setq ring-bell-function 'ignore)
 
 (add-to-list 'default-frame-alist '(undecorated-round . t))
 
