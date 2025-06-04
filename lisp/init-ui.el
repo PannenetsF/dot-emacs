@@ -11,6 +11,8 @@
 (setq-default cursor-in-non-selected-windows nil)
 (setq x-underline-at-descent-line t)
 (setq x-stretch-cursor t)
+(setq inhibit-startup-screen t)
+
 
 (add-to-list 'default-frame-alist '(undecorated-round . t))
 
