@@ -10,6 +10,8 @@
   (evil-mode 1)
   )
 
+(use-package evil-collection)
+
 (require 'evil)
 
 (provide 'init-evil)
